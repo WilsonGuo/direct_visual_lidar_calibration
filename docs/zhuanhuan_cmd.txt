@@ -1,0 +1,8 @@
+
+rosrun direct_visual_lidar_calibration preprocess  /home/wilson/test/ /home/wilson/fast_livo_ws/src/direct_visual_lidar_calibration/result -av
+
+rosrun direct_visual_lidar_calibration initial_guess_manual /home/wilson/fast_livo_ws/src/direct_visual_lidar_calibration/result
+
+rosrun direct_visual_lidar_calibration calibrate /home/wilson/fast_livo_ws/src/direct_visual_lidar_calibration/result
+
+rosrun direct_visual_lidar_calibration viewer /home/wilson/fast_livo_ws/src/direct_visual_lidar_calibration/result

@@ -1,0 +1,35 @@
+
+使用说明：https://koide3.github.io/direct_visual_lidar_calibration/example/
+
+播放bag：
+
+rosbag play /media/wilson/wilsonpan/RosBagData/cc_2024-05-27-17-28-38.bag
+
+
+预处理：
+
+rosrun direct_visual_lidar_calibration preprocess  /home/wilson/test/ /home/wilson/fast_livo_ws/src/direct_visual_lidar_calibration/result -av
+
+初始猜测：
+
+rosrun direct_visual_lidar_calibration initial_guess_manual /home/wilson/fast_livo_ws/src/direct_visual_lidar_calibration/result
+
+校准标定：
+
+rosrun direct_visual_lidar_calibration calibrate /home/wilson/fast_livo_ws/src/direct_visual_lidar_calibration/result
+
+校验结果：
+
+rosrun direct_visual_lidar_calibration viewer /home/wilson/fast_livo_ws/src/direct_visual_lidar_calibration/result
+
+
+/media/wilson/新加卷/bag
+
+
+rosrun direct_visual_lidar_calibration preprocess  /media/wilson/新加卷/bag1 /home/wilson/fast_livo_ws/src/direct_visual_lidar_calibration/result -av
+
+
+rosrun direct_visual_lidar_calibration initial_guess_manual /home/wilson/fast_livo_ws/src/direct_visual_lidar_calibration/result
+
+
+rosrun direct_visual_lidar_calibration calibrate /home/wilson/fast_livo_ws/src/direct_visual_lidar_calibration/result
